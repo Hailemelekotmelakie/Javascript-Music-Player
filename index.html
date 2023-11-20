@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini javascript audio player</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="buttonsContainer">
+        <p onclick="back()" class="buttonBack">Back</p>
+        <p onclick="toggler()" class="buttonPlayPause">Play Pause</p>
+        <p onclick="next()" class="buttonBack">Next</p>
+      </div>
+      <p>Music timer</p>
+      <div class="timeContainer">
+        <p class="currentTime">00:00</p>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          onchange="seekTime()"
+          class="timeRange"
+        />
+        <p class="duration">00:00</p>
+      </div>
+      <p>Volume</p>
+      <div>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="40"
+          onchange="seekVolume()"
+          class="volumeRange"
+        />
+      </div>
+    </div>
+  </body>
+</html>
