@@ -13,6 +13,10 @@ let isPlaying = false;
 
 audio.src = musics[index];
 
+audio.addEventListener("ended", () => {
+  next();
+});
+
 setInterval(() => {
   durationer();
 }, 1000);
@@ -25,7 +29,15 @@ addEventListener("keyup", back);
 addEventListener("keypress", toggler);
 
 function toggler() {
-  isPlaying ? pause() : play();
+  if (isPlaying) {
+    pause();
+    select(".buttonPlayPause").classList.remove("buttonPause");
+    select(".buttonPlayPause").classList.add("buttonPlay");
+  } else {
+    play();
+    select(".buttonPlayPause").classList.add("buttonPause");
+    select(".buttonPlayPause").classList.remove("buttonPlay");
+  }
 }
 
 function play() {

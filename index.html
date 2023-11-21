@@ -10,9 +10,37 @@
   <body>
     <div class="container">
       <div class="buttonsContainer">
-        <p onclick="back()" class="buttonBack">Back</p>
-        <p onclick="toggler()" class="buttonPlayPause">Play Pause</p>
-        <p onclick="next()" class="buttonBack">Next</p>
+        <svg
+          onclick="back()"
+          width="39"
+          height="39"
+          class="svgNext"
+          fill="var(--gray-color)"
+          viewBox="0 0 20 20"
+        >
+          <path
+            stroke="var(--gray-color)"
+            stroke-linecap="round"
+            d="M6.5 6v8"
+          />
+          <path
+            d="M6.903 10.697l6.364 3.692c.54.313 1.232-.066 1.232-.697V6.308c0-.63-.692-1.01-1.232-.696L6.903 9.304a.802.802 0 000 1.393z"
+          />
+        </svg>
+        <p onclick="toggler()" class="buttonPlayPause buttonPlay"></p>
+        <svg
+          onclick="next()"
+          width="39"
+          height="39"
+          class="svgNext"
+          fill="var(--gray-color)"
+          viewBox="0 0 20 20"
+        >
+          <path stroke="var(--gray-color)" stroke-linecap="round" d="M14 6v8" />
+          <path
+            d="M13.596 10.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V6.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"
+          />
+        </svg>
       </div>
       <p>Music timer</p>
       <div class="timeContainer">
