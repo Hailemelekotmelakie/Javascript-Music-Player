@@ -1,18 +1,19 @@
 :root {
     --primary-color: rgb(255, 187, 0);
     --white-color: #ffffff;
-    --gray-color: #7b7b7b;
+    --gray-color: rgb(156, 156, 156);
     --black-color: #000;
 }
 
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 body {
     background-color: var(--black-color);
-    color: var(--white-color);
+    color: var(--gray-color);
 }
 
 .container {
@@ -54,7 +55,6 @@ body {
     gap: 10px;
 }
 
-
 input[type="range"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -78,7 +78,6 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     border-radius: 50%;
 }
-
 
 .buttonPlayPause {
     background-color: transparent;
@@ -108,4 +107,12 @@ input[type="range"]::-webkit-slider-thumb {
     bottom: 0;
     right: 0;
     z-index: 99;
+}
+
+.volumeContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }

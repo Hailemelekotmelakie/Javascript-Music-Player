@@ -7,8 +7,10 @@
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="volumeIconizer()">
     <div class="container">
+      <h2 class="artistName"></h2>
+      <h5 class="numberOfArtist"></h5>
       <div class="buttonsContainer">
         <svg
           onclick="back()"
@@ -42,7 +44,7 @@
           />
         </svg>
       </div>
-      <p>Music timer</p>
+      <p>Music timeline</p>
       <div class="timeContainer">
         <p class="currentTime">00:00</p>
         <input
@@ -55,8 +57,8 @@
         />
         <p class="duration">00:00</p>
       </div>
-      <p>Volume</p>
-      <div>
+      <div class="volumeContainer">
+        <p class="volumeLabel"></p>
         <input
           type="range"
           min="0"
